@@ -1,0 +1,21 @@
+# Azure Multi-Region Resilient Infrastructure
+
+## 🚀 Project Overview
+I designed and deployed a globally redundant cloud infrastructure in Microsoft Azure to ensure 99.99% availability. This project simulates a production environment for a high-traffic application where downtime is not an option.
+
+## 🏗️ Architecture Components
+- **Global Load Balancing:** Azure Front Door (Standard)
+- **Compute:** 2x Azure Static Web Apps (East US 2 & West US 2)
+- **Networking:** Virtual Network (VNet) Peering for cross-region communication
+- **Governance:** Resource Locks and regional Resource Group isolation
+
+## 🛠️ Challenges & Solutions
+- **Quota Limitations:** Encountered a 0-vCPU limit for standard App Services. **Solution:** Pivoted to a serverless architecture using Static Web Apps to bypass hardware constraints while reducing cost.
+- **Provider Registration:** Fixed `MissingSubscriptionRegistration` for `Microsoft.Cdn` by manually registering the resource provider in the subscription settings.
+- **Propagation Delay:** Managed global DNS sync times (~20 mins) for Front Door endpoints, verifying backend health via direct endpoint testing.
+
+## 📈 Skills Showcased
+- Cloud Architecture & High Availability
+- Global Traffic Routing
+- Cost Optimization & Quota Management
+- Troubleshooting Cloud Service Dependencies
