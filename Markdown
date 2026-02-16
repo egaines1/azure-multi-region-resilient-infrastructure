@@ -7,7 +7,7 @@ I designed and deployed a globally redundant cloud infrastructure in Microsoft A
 - **Global Load Balancing:** Azure Front Door (Standard)
 - **Compute:** 2x Azure Static Web Apps (East US 2 & West US 2)
 - **Networking:** Virtual Network (VNet) Peering for cross-region communication
-- **Governance:** Resource Locks and regional Resource Group isolation(1 Creation of Resource Groups and Resource Locks.PNG)
+- **Governance:** Resource Locks and regional Resource Group isolation(https://github.com/egaines1/azure-multi-region-resilient-infrastructure/blob/main/1%20Creation%20of%20Resource%20Groups%20and%20Resource%20Locks.PNG)
 
 ## 🛠️ Challenges & Solutions
 - **Quota Limitations:** Encountered a 0-vCPU limit for standard App Services. **Solution:** Pivoted to a serverless architecture using Static Web Apps to bypass hardware constraints while reducing cost.
